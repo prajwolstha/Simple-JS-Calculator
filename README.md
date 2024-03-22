@@ -1,6 +1,8 @@
 ![Simple JavaScript Calculator Logo](logo.png)
 # Simple JavaScript Calculator
 
+See Live demo from [Here](https://prajwolstha.github.io/Simple-JS-Calculator/).
+
 ## Description
 This is a simple calculator built using HTML, CSS, and JavaScript. It is designed to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. This project is perfect for beginners looking to understand how to create interactive web pages with JavaScript.
 
