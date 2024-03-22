@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="script.js"> -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/18baa9d9d3.js" crossorigin="anonymous"></script>
+    <title>calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <div class="innerscreen">
+          <p id="output"></p>
+        </div>
+      </div>
+      <div class="numbers">
+        <div><button class="number" id="ac" onclick="window.location.reload()">AC</button></div>
+        <div><button class="number"  id="ac">CE</button></div>
+        <div><button class="number" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button></div>
+        <div><button class="number" value="/" onclick="myfun('/')">÷</button></div>
+      </div>
+
+      <div class="numbers">
+        <div>
+          <button class="number"  onclick="myfun('9')">9</button>
+        </div>
+        <div>
+          <button class="number" onclick="myfun('8')">8</button>
+        </div>
+        <div>
+          <button class="number" onclick="myfun('7')">7</button>
+        </div>
+
+        <div>
+          <button class="number" onclick="myfun('*')">x</button>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div>
+          <button class="number" onclick="myfun('4')">4</button>
+        </div>
+        <div>
+          <button class="number" onclick="myfun('5')">5</button>
+        </div>
+        <div>
+          <button class="number" onclick="myfun('6')">6</button>
+        </div>
+        <div>
+          <button class="number" onclick="myfun('+')">+</button>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div>
+          <button class="number"  onclick="myfun('1')">1</button>
+        </div>
+        <div>
+          <button class="number" onclick="myfun('2')">2</button>
+        </div>
+        <div>
+          <button class="number"  onclick="myfun('3')">3</button>
+        </div>
+        <div>
+          <button class="number"  onclick="myfun('-')">-</button>
+        </div>
+      </div>
+
+      <div class="numbers">
+        <div class="number"  onclick="myfun('.')">.</div>
+        <div class="number"  onclick="myfun('0')">0</div>
+        <div class="number" onclick="myfun('%')">%</div>
+
+        <div class="number" id="final" onclick="calc()">=</div>
+      
+      </div>
+    </div>
+    <script>
+      function myfun(value) {
+        document.getElementById('output').textContent += value;
+      }
+      
+      function calc() {
+        let displayValue = document.getElementById('output').textContent;
+            let result = eval(displayValue);
+            document.getElementById('output').textContent = result;
+      }
+
+      function backspace() {
+            let output = document.getElementById('output');
+            let currentValue = output.textContent;
+            output.textContent = currentValue.slice(0, -1);
+        }
+      // function myfun1(){
+
+      // document.getElementById('output').innerHTML=8;
+      // }
+    </script>
+  </body>
+</html>
